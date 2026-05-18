@@ -25,14 +25,14 @@ export function activate(context: vscode.ExtensionContext) {
 	watcher.onDidCreate(_ => documentProvider.refresh());
 	watcher.onDidDelete(_ => documentProvider.refresh());
 
-	let setDocumentationPath = vscode.commands.registerCommand('docsidepanel.documentationPath', () => setDocPath(documentProvider));
-	let newFile = vscode.commands.registerCommand('docsidepanel.newFile', (doc?: Document) => createFile(getPath(), doc));
-	let newFolder = vscode.commands.registerCommand('docsidepanel.newFolder', (doc?: Document) => createFolder(getPath(), doc));
-	let refresh = vscode.commands.registerCommand('docsidepanel.refresh', () => documentProvider.refresh());
-	let fileCut = vscode.commands.registerCommand('docsidepanel.file.cut', (doc?: Document) => cutFile(doc));
-	let fileCopy = vscode.commands.registerCommand('docsidepanel.file.copy', (doc?: Document) => copyFile(doc));
-	let fileRename = vscode.commands.registerCommand('docsidepanel.file.rename', (doc?: Document) => renameFile(doc));
-	let fileDelete = vscode.commands.registerCommand('docsidepanel.file.delete', (doc?: Document) => deleteFile(doc));
+	let setDocumentationPath = vscode.commands.registerCommand('sidenotes.documentationPath', () => setDocPath(documentProvider));
+	let newFile = vscode.commands.registerCommand('sidenotes.newFile', (doc?: Document) => createFile(getPath(), doc));
+	let newFolder = vscode.commands.registerCommand('sidenotes.newFolder', (doc?: Document) => createFolder(getPath(), doc));
+	let refresh = vscode.commands.registerCommand('sidenotes.refresh', () => documentProvider.refresh());
+	let fileCut = vscode.commands.registerCommand('sidenotes.file.cut', (doc?: Document) => cutFile(doc));
+	let fileCopy = vscode.commands.registerCommand('sidenotes.file.copy', (doc?: Document) => copyFile(doc));
+	let fileRename = vscode.commands.registerCommand('sidenotes.file.rename', (doc?: Document) => renameFile(doc));
+	let fileDelete = vscode.commands.registerCommand('sidenotes.file.delete', (doc?: Document) => deleteFile(doc));
 
 	context.subscriptions.push(setDocumentationPath);
 	context.subscriptions.push(newFile);

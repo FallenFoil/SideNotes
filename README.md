@@ -1,3 +1,3 @@
-# DocSidePanel
+# SideNotes
 
-A VSCode extension for easy access to a folder with Markdown documention files.
+A VSCode extension for easy access to a folder with documention/notes files.
